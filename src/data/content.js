@@ -344,39 +344,39 @@ export const modal = {
 // Menggunakan foto unik penuh kenangan dan doa
 // =====================================================================
 export const wishGrantedPhotos = {
-	title: "Harapanmu Telah Terkabul! 💕",
-	subtitle: '"Semoga semua doa terbaikmu dikabulkan, Araa. Dan semoga kenangan indah kita akan terus bertambah seiring berjalannya waktu."',
-	closeLabel: "Aamiin 🌸",
+	title: "Harapan & Doa Terbaik Buat Araa 🎂",
+	subtitle: '"Semoga semua doa dan usahamu selalu lancar tanpa kendala, selalu dikelilingi hal-hal positif, dan bahagia selalu! 🤲🤍"',
+	closeLabel: "Aamiin Ya Allah 🤲🤍",
 	photos: [
 		{
 			src: "/photos/foto-11.jpg",
-			caption: "Harapan Kebaikan ✨",
-			backText: "Semoga langkahmu selalu dipenuhi dengan kemudahan dan keberkahan di setiap jalan yang kamu pilih. Amin! 🤲🌸",
+			caption: "Lancar Doa & Usahanya 🤲",
+			backText: "Semoga segala doa, impian, dan usaha-usaha kamu selalu lancar tidak ada kendala sama sekali okei? Aku selalu doain yang terbaik dari sini. ✨",
 		},
 		{
 			src: "/photos/foto-12.jpg",
-			caption: "Kesehatan & Kebahagiaan 😊",
-			backText: "Semoga senyum manismu ini gak pernah hilang, dan kamu selalu sehat serta bahagia. Stay happy, Ara! 💖",
+			caption: "Tumbuh Kuat & Sehat 👶",
+			backText: "Dari kecil udah mandiri dan ngegemesin. Semoga kamu selalu diberikan kesehatan, umur panjang yang berkah, dan hati yang lapang. 🤍",
 		},
 		{
 			src: "/photos/foto-13.jpg",
-			caption: "Mimpi yang Terwujud 🌠",
-			backText: "Semoga semua impian dan rencana besarmu pelan-pelan bisa terwujud dengan cara terbaik. Aku selalu dukung kamu! ✨",
+			caption: "Tetap Ceria & Waras 🤪",
+			backText: "Tetap jadi diri sendiri yang ceria dan asik. Di usia baru ini tetap waras, bisa kendalikan diri, dan jangan kebanyakan ovt yaa! 🤏🏻",
 		},
 		{
 			src: "/photos/foto-14.jpg",
-			caption: "Kedamaian Hati 🤍",
-			backText: "Semoga hatimu selalu dilingkupi rasa damai dan jauh dari kekhawatiran. Kamu berharga dan layak mendapatkan semua kebaikan. 🥰",
+			caption: "Dikelilingi Hal Positif 🌸",
+			backText: "Semoga hari-harimu selalu dikelilingi oleh hal-hal positif dan orang-orang yang tulus menyayangimu. Jangan pernah merasa sendiri lagi! 🌷",
 		},
 		{
 			src: "/photos/foto-15.jpg",
-			caption: "Kesuksesan di Depan 🎓",
-			backText: "Semoga segala usaha dan perjuanganmu saat ini dimudahkan dan menghasilkan kesuksesan yang kamu impikan. Semangat, Ara! 🚀",
+			caption: "Langkah yang Diberkahi 🍼",
+			backText: "Perjalanan hidupmu dari awal hingga sekarang begitu luar biasa. Terima kasih sudah bertahan sejauh ini, kamu hebat banget Araa. 🥺💕",
 		},
 		{
 			src: "/photos/foto-16.jpg",
-			caption: "Kenangan Abadi 🎁",
-			backText: "Semoga momen bahagia ini menjadi kenangan indah yang selalu kamu ingat. Selamat ulang tahun, Araa! 🎂💖",
+			caption: "Masa Depan Cerah 📚",
+			backText: "Semangat terus meraih masa depan yang kamu impikan. Perempuan mandiri dan kuat kayak kamu pasti bisa lewatin semuanya satu-satu! 🚀💖",
 		},
 	],
 };

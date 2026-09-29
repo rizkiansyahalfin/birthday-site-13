@@ -52,11 +52,11 @@ const tilts = ['-rotate-3', 'rotate-2', '-rotate-1', 'rotate-3', 'rotate-1', '-r
         </p>
 
         <!-- Grid of polaroids -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center max-w-full mx-auto my-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-5 justify-items-center max-w-full mx-auto my-6">
           <div
             v-for="(photo, i) in wishGrantedPhotos.photos"
             :key="i"
-            class="polaroid-wrapper relative w-40 h-[240px] cursor-pointer select-none transition-all duration-500 hover:scale-105 hover:rotate-0"
+            class="polaroid-wrapper relative w-full max-w-[170px] sm:w-40 h-[230px] sm:h-[245px] cursor-pointer select-none transition-all duration-500 hover:scale-105 hover:rotate-0"
             :class="tilts[i % tilts.length]"
             :style="{
               animationDelay: `${i * 100}ms`,
@@ -72,31 +72,36 @@ const tilts = ['-rotate-3', 'rotate-2', '-rotate-1', 'rotate-3', 'rotate-1', '-r
               :class="{ 'is-flipped': flipped[i] }"
             >
               <!-- CARD FRONT -->
-              <div class="card-front absolute inset-0 bg-cream p-2 pb-4 rounded-sm shadow-soft flex flex-col justify-between">
-                <div class="relative w-full aspect-square bg-wine-700/20 overflow-hidden mb-2">
+              <div class="card-front absolute inset-0 bg-cream p-2 pb-3 rounded-sm shadow-soft flex flex-col justify-between">
+                <div class="relative w-full aspect-square bg-wine-700/20 overflow-hidden mb-1.5 rounded-sm">
                   <img
                     v-if="!failed[i]"
                     :src="photo.src"
                     :alt="photo.caption"
-                    class="w-full h-full object-cover"
+                    class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                     @error="onImgError(i)"
                   />
                   <div v-else class="w-full h-full flex items-center justify-center text-3xl text-wine-700/40">
                     🖼️
                   </div>
                 </div>
-                <p class="font-accent italic text-wine-800 text-[10px] text-center px-1 leading-tight truncate">{{ photo.caption }}</p>
+                <div class="flex flex-col items-center">
+                  <p class="font-accent italic text-wine-800 text-[11px] sm:text-[10px] text-center px-0.5 leading-snug line-clamp-2">{{ photo.caption }}</p>
+                  <span class="text-[8px] text-rose-500/70 font-ui text-center mt-0.5 sm:hidden">ketuk kartu 💌</span>
+                </div>
               </div>
 
               <!-- CARD BACK -->
-              <div class="card-back absolute inset-0 bg-cream p-3 rounded-sm shadow-soft flex flex-col justify-between items-center text-center border border-rose-300/10">
-                <div class="text-rose-400 text-[10px] mt-1">🌸 ✦ 🌸</div>
-                <div class="flex-grow flex items-center justify-center">
-                  <p class="font-accent italic text-wine-900 text-[11px] leading-relaxed px-1">
+              <div class="card-back absolute inset-0 bg-cream p-2.5 sm:p-3 rounded-sm shadow-soft flex flex-col justify-between items-center text-center border border-rose-300/10">
+                <div class="text-rose-400 text-[10px] mt-0.5">🌸 ✦ 🌸</div>
+                <div class="flex-grow flex items-center justify-center overflow-y-auto my-0.5">
+                  <p class="font-accent italic text-wine-900 text-[10px] sm:text-[11px] leading-relaxed px-0.5">
                     {{ photo.backText }}
                   </p>
                 </div>
-                <div class="text-[8px] text-rose-500 font-ui tracking-wider uppercase opacity-60 mb-1">
+                <div class="text-[8px] text-rose-500 font-ui tracking-wider uppercase opacity-60 mb-0.5">
                   Tap to Flip 💕
                 </div>
               </div>
@@ -106,7 +111,7 @@ const tilts = ['-rotate-3', 'rotate-2', '-rotate-1', 'rotate-3', 'rotate-1', '-r
 
         <button
           @click="emit('close')"
-          class="mt-8 px-10 py-3 rounded-full bg-rose-400/20 hover:bg-rose-400/30 border border-rose-300/30 text-rose-100 font-ui text-xs tracking-widest uppercase transition-all duration-300 hover:scale-105"
+          class="mt-6 sm:mt-8 px-8 sm:px-10 py-2.5 sm:py-3 rounded-full bg-rose-400/20 hover:bg-rose-400/30 border border-rose-300/30 text-rose-100 font-ui text-xs tracking-widest uppercase transition-all duration-300 hover:scale-105 shadow-sm"
         >
           {{ wishGrantedPhotos.closeLabel ?? 'Aamiin 🌸' }}
         </button>
