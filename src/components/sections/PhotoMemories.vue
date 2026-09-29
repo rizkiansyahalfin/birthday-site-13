@@ -10,9 +10,9 @@ const activeCategory = ref('all')
 
 const categories = [
   { id: 'all', name: 'Semua 📸' },
-  { id: 'couple', name: 'Kisah Kita 💑' },
-  { id: 'smile', name: 'Senyumanmu ✨' },
-  { id: 'special', name: 'Momen Spesial 💖' },
+  { id: 'smile', name: 'Senyum Manis 🌸' },
+  { id: 'gemas', name: 'Muka Gemas 🤏🏻' },
+  { id: 'special', name: 'Potret Spesial ✨' },
 ]
 
 const filteredPhotos = computed(() => {

@@ -34,7 +34,7 @@ const sectionRef = useReveal()
           <!-- Flower decoration on card corners (matching screenshot) -->
           <div v-if="i === 0" class="absolute -top-2.5 -right-2 text-sm z-20 select-none">🌸</div>
           <div v-if="i === 2" class="absolute -top-2.5 -left-2 text-sm z-20 select-none">🌸</div>
-          <div v-if="i === 4" class="absolute -top-2.5 -right-2 text-sm z-20 select-none">🌸</div>
+          <div v-if="i === 3" class="absolute -top-2.5 -right-2 text-sm z-20 select-none">🌸</div>
 
           <div class="text-2xl mb-3">{{ item.icon }}</div>
           <p class="text-rose-300 font-ui text-[10px] tracking-[0.2em] uppercase mb-2">{{ item.tag }}</p>
